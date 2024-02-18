@@ -43,15 +43,15 @@ macro_rules! define_hrp_const {
 }
 define_hrp_const! {
     /// The human-readable part used by the Bitcoin mainnet network.
-    pub const BC 2 [98, 99, 0, 0];
+    pub const GB 2 [103, 98, 0, 0];
 }
 define_hrp_const! {
     /// The human-readable part used by the Bitcoin testnet networks (testnet, signet).
-    pub const TB 2 [116, 98, 0, 0];
+    pub const TG 2 [116, 103, 0, 0];
 }
 define_hrp_const! {
     /// The human-readable part used when running a Bitcoin regtest network.
-    pub const BCRT 4 [98, 99, 114, 116];
+    pub const GBRT 4 [103, 98, 114, 116];
 }
 
 /// The human-readable part (human readable prefix before the '1' separator).
@@ -518,10 +518,10 @@ mod tests {
     #[cfg(feature = "alloc")]
     #[test]
     fn hrp_consts() {
-        use crate::primitives::hrp::{BC, BCRT, TB};
-        assert_eq!(BC, Hrp::parse_unchecked("bc"));
-        assert_eq!(TB, Hrp::parse_unchecked("tb"));
-        assert_eq!(BCRT, Hrp::parse_unchecked("bcrt"));
+        use crate::primitives::hrp::{GB, GBRT, TG};
+        assert_eq!(GB, Hrp::parse_unchecked("gb"));
+        assert_eq!(TG, Hrp::parse_unchecked("tg"));
+        assert_eq!(GBRT, Hrp::parse_unchecked("gbrt"));
     }
 
     #[test]

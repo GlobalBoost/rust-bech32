@@ -37,7 +37,7 @@
 //!
 //! const DATA: [u8; 20] = [0xab; 20]; // Arbitrary data to be encoded.
 //! const STRING: &str = "abc14w46h2at4w46h2at4w46h2at4w46h2at958ngu";
-//! const TAP_ADDR: &str = "bc1p4w46h2at4w46h2at4w46h2at4w46h2at5kreae";
+//! const TAP_ADDR: &str = "gb1p4w46h2at4w46h2at4w46h2at4w46h2atjrmxxs";
 //!
 //! // Encode arbitrary data using "abc" as the human-readable part and append a bech32m checksum.
 //! let hrp = Hrp::parse("abc").expect("valid hrp");
@@ -64,7 +64,7 @@
 //!
 //! const DATA: [u8; 20] = [0xab; 20]; // Arbitrary data to be encoded.
 //! const STRING: &str = "abc14w46h2at4w46h2at4w46h2at4w46h2at958ngu";
-//! const TAP_ADDR: &str = "bc1p4w46h2at4w46h2at4w46h2at4w46h2at5kreae";
+//! const TAP_ADDR: &str = "gb1p4w46h2at4w46h2at4w46h2at4w46h2atjrmxxs";
 //!
 //! // Decode a bech32 encoded string that includes a bech32/bech32m checksum.
 //! //

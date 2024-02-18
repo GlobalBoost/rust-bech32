@@ -20,17 +20,17 @@
 //! ];
 //!
 //! // Encode a taproot address suitable for use on mainnet.
-//! let _ = segwit::encode_v1(hrp::BC, &witness_prog);
+//! let _ = segwit::encode_v1(hrp::GB, &witness_prog);
 //!
 //! // Encode a segwit v0 address suitable for use on testnet.
 //! let _ = segwit::encode_v0(hrp::TB, &witness_prog);
 //!
 //! // If you have the witness version already you can use:
 //! # let witness_version = segwit::VERSION_0;
-//! let _ = segwit::encode(hrp::BC, witness_version, &witness_prog);
+//! let _ = segwit::encode(hrp::GB, witness_version, &witness_prog);
 //!
 //! // Decode a Bitcoin bech32 segwit address.
-//! let address = "bc1q2s3rjwvam9dt2ftt4sqxqjf3twav0gdx0k0q2etxflx38c3x8tnssdmnjq";
+//! let address = "gb1q2s3rjwvam9dt2ftt4sqxqjf3twav0gdx0k0q2etxflx38c3x8tnssdmnjq";
 //! let (hrp, witness_version, witness_program) = segwit::decode(address).expect("failed to decode address");
 //! # }
 //! ```
@@ -74,7 +74,7 @@ pub use {
 ///
 /// ```
 /// use bech32::segwit;
-/// let address = "bc1py3m7vwnghyne9gnvcjw82j7gqt2rafgdmlmwmqnn3hvcmdm09rjqcgrtxs";
+/// let address = "gb1py3m7vwnghyne9gnvcjw82j7gqt2rafgdmlmwmqnn3hvcmdm09rjqcgrtxs";
 /// let (_hrp, _witness_version, _witness_program) = segwit::decode(address).expect("failed to decode address");
 /// ```
 #[cfg(feature = "alloc")]
@@ -473,7 +473,7 @@ mod tests {
     fn encode_lower_to_fmt() {
         let program = witness_program();
         let mut address = String::new();
-        encode_to_fmt_unchecked(&mut address, hrp::BC, VERSION_0, &program)
+        encode_to_fmt_unchecked(&mut address, hrp::GB, VERSION_0, &program)
             .expect("failed to encode address to QR code");
 
         let want = "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4";
@@ -484,7 +484,7 @@ mod tests {
     fn encode_upper_to_fmt() {
         let program = witness_program();
         let mut address = String::new();
-        encode_upper_to_fmt_unchecked(&mut address, hrp::BC, VERSION_0, &program)
+        encode_upper_to_fmt_unchecked(&mut address, hrp::GB, VERSION_0, &program)
             .expect("failed to encode address to QR code");
 
         let want = "BC1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KV8F3T4";
@@ -509,7 +509,7 @@ mod tests {
     fn encode_upper_to_writer() {
         let program = witness_program();
         let mut buf = Vec::new();
-        encode_upper_to_writer_unchecked(&mut buf, hrp::BC, VERSION_0, &program)
+        encode_upper_to_writer_unchecked(&mut buf, hrp::GB, VERSION_0, &program)
             .expect("failed to encode");
 
         let address = std::str::from_utf8(&buf).expect("ascii is valid utf8");

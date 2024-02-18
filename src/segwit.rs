@@ -496,7 +496,7 @@ mod tests {
     fn encode_lower_to_writer() {
         let program = witness_program();
         let mut buf = Vec::new();
-        encode_lower_to_writer_unchecked(&mut buf, hrp::BC, VERSION_0, &program)
+        encode_lower_to_writer_unchecked(&mut buf, hrp::GB, VERSION_0, &program)
             .expect("failed to encode");
 
         let address = std::str::from_utf8(&buf).expect("ascii is valid utf8");

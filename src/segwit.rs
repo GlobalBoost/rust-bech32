@@ -23,7 +23,7 @@
 //! let _ = segwit::encode_v1(hrp::GB, &witness_prog);
 //!
 //! // Encode a segwit v0 address suitable for use on testnet.
-//! let _ = segwit::encode_v0(hrp::TB, &witness_prog);
+//! let _ = segwit::encode_v0(hrp::TG, &witness_prog);
 //!
 //! // If you have the witness version already you can use:
 //! # let witness_version = segwit::VERSION_0;

@@ -5,4 +5,4 @@
 //! [`primitives::hrp`]: crate::primitives::hrp
 
 #[doc(inline)]
-pub use crate::primitives::hrp::{Hrp, BC, BCRT, TB};
+pub use crate::primitives::hrp::{Hrp, GB, GBRT, TG};

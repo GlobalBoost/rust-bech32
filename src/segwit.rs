@@ -476,7 +476,7 @@ mod tests {
         encode_to_fmt_unchecked(&mut address, hrp::GB, VERSION_0, &program)
             .expect("failed to encode address to QR code");
 
-        let want = "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4";
+        let want = "gb1qw508d6qejxtdg4y5r3zarvary0c5xw7k2j3wsu";
         assert_eq!(address, want);
     }
 
@@ -487,7 +487,7 @@ mod tests {
         encode_upper_to_fmt_unchecked(&mut address, hrp::GB, VERSION_0, &program)
             .expect("failed to encode address to QR code");
 
-        let want = "BC1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KV8F3T4";
+        let want = "GB1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7K2J3WSU";
         assert_eq!(address, want);
     }
 
@@ -500,7 +500,7 @@ mod tests {
             .expect("failed to encode");
 
         let address = std::str::from_utf8(&buf).expect("ascii is valid utf8");
-        let want = "bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4";
+        let want = "gb1qw508d6qejxtdg4y5r3zarvary0c5xw7k2j3wsu";
         assert_eq!(address, want);
     }
 
@@ -513,7 +513,7 @@ mod tests {
             .expect("failed to encode");
 
         let address = std::str::from_utf8(&buf).expect("ascii is valid utf8");
-        let want = "BC1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KV8F3T4";
+        let want = "GB1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7K2J3WSU";
         assert_eq!(address, want);
     }
 
